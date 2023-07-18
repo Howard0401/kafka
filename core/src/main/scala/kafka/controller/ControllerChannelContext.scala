@@ -20,6 +20,7 @@ import kafka.cluster.Broker
 import org.apache.kafka.common.{TopicPartition, Uuid}
 
 trait ControllerChannelContext {
+  // Broker 啟動、刪除 Topic、Replica ReAssignment、sendRequestsToBrokers
   def isTopicDeletionInProgress(topicName: String): Boolean
 
   def topicIds: collection.Map[String, Uuid]
@@ -36,7 +37,22 @@ trait ControllerChannelContext {
 
   def leaderEpoch(topicPartition: TopicPartition): Int
 
+  // 判斷 Broker 有無存活，這邊在 
+  // 1. ReplicaStateMachine 內 ZkReplicaStateMachine 判斷 OfflineReplica 時會用到
+  // 2. Controller ChannelManager addLeaderAndIsrRequestForBrokers() 會用到
+  // 3. processAlterPartition ReassignPartitionsCommand 會用到
+  // 4. processIsrChangeNotification
+  // 5. processBrokerChange
+  // 6. updateMetrics
+  // 7. processControlledShutdown -> doControlledShutdown(with callback)
+  // 8. initializeControllerContext
+  // 9. onPartitionReassignment
+  // 10. onReplicasBecomeOffline
+  // 11. onBrokerUpdate
+  // 12. onBrokerStartup
+  // 13. readOffsetMessageValue
   def liveOrShuttingDownBrokerIds: collection.Set[Int]
 
+  // 根據 Ctx 傳遞的 leader info 與 ISR 資訊
   def partitionLeadershipInfo(topicPartition: TopicPartition): Option[LeaderIsrAndControllerEpoch]
 }

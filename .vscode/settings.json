@@ -1,0 +1,11 @@
+{
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": true,
+    "strings": "off"
+  },
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "files.watcherExclude": {
+    "**/target": true
+  }
+}
