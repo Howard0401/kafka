@@ -25,12 +25,41 @@ trait ControllerChannelContext {
 
   def topicIds: collection.Map[String, Uuid]
 
+
+  // ControllerChannelManager.scala
+  // AbstractControllerBrokerRequestBatch ->  addLeaderAndIsrRequestForBrokers -> 
+  // 1. sendLeaderAndIsrRequest ->   metadataInstance.liveBrokerIdAndEpochs
+  // 2. sendUpdateMetadataRequests
+  // 3. sendStopReplicaRequests
+
+  // KafkaController.scala 
+  // processBrokerChange 從 zk 拉出 broker 的狀態(這邊要看) 
+  // initializeControllerContext
+  // doControlledShutdown
+  // processBrokerChange
+  // tryProcessAlterPartition
+  // processAllocateProducerIds
   def liveBrokerIdAndEpochs: collection.Map[Int, Long]
 
+  //////////////////////////////////////////////
+  // ControllerChannelManager.scala
+  // 1. sendLeaderAndIsrRequest
+  // 2. sendUpdateMetadataRequests
+
+  // KafkaController.scala 
+  // initializeControllerContext
+  // newFinalizedVersionOrIncompatibilityError
   def liveOrShuttingDownBrokers: collection.Set[Broker]
 
+  // 各種操作
   def isTopicQueuedUpForDeletion(topic: String): Boolean
 
+
+  // ControllerChannelContext.scala
+  // addUpdateMetadataRequestForBrokers
+  // 1. Eelection.scala -> leaderForOffline 判斷能否參選
+  // KafkaController.scala 
+  // delete
   def isReplicaOnline(brokerId: Int, partition: TopicPartition): Boolean
 
   def partitionReplicaAssignment(partition: TopicPartition): collection.Seq[Int]
