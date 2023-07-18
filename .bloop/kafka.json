@@ -1,0 +1,411 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "kafka",
+        "directory": "/Users/howard/notes/kafka",
+        "workspaceDir": "/Users/howard/notes/kafka",
+        "sources": [
+            "/Users/howard/notes/kafka/src/main/java"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            
+        ],
+        "out": "/Users/howard/notes/kafka/.bloop/kafka/build",
+        "classesDir": "/Users/howard/notes/kafka/.bloop/kafka/build/classes",
+        "resources": [
+            "/Users/howard/notes/kafka/src/main/resources"
+        ],
+        "java": {
+            "options": [
+                "-source",
+                "11",
+                "-target",
+                "11",
+                "-h",
+                "/Users/howard/notes/kafka/build/generated/sources/headers/java/main",
+                "-g",
+                "-sourcepath",
+                "",
+                "-proc:none",
+                "-XDuseUnsharedTable=true"
+            ]
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/Library/Java/JavaVirtualMachines/microsoft-11.jdk/Contents/Home",
+                "options": [
+                    
+                ]
+            },
+            "mainClass": [
+                
+            ],
+            "classpath": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "javax.servlet",
+                    "name": "javax.servlet-api",
+                    "version": "3.1.0",
+                    "artifacts": [
+                        {
+                            "name": "javax.servlet-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar"
+                        },
+                        {
+                            "name": "javax.servlet-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.javassist",
+                    "name": "javassist",
+                    "version": "3.27.0-GA",
+                    "artifacts": [
+                        {
+                            "name": "javassist",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.27.0-GA/f63e6aa899e15eca8fdaa402a79af4c417252213/javassist-3.27.0-GA.jar"
+                        },
+                        {
+                            "name": "javassist",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.27.0-GA/e5dea2989ab81731501c670be0d1514512dbc13a/javassist-3.27.0-GA-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.swagger.core.v3",
+                    "name": "swagger-core",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "swagger-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-core/2.2.0/cc13730807aa6649f91a4e1ca4590e458dfda343/swagger-core-2.2.0.jar"
+                        },
+                        {
+                            "name": "swagger-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-core/2.2.0/60fa054051a050c2bce8b0e5134197d987fb54b3/swagger-core-2.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.dataformat",
+                    "name": "jackson-dataformat-yaml",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-dataformat-yaml",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.13.4/3142ec201e878372d1561e64bd1a947d9e88a03d/jackson-dataformat-yaml-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-dataformat-yaml",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.13.4/cf24e9eeb9197901e701244ec0836e698fe55e2d/jackson-dataformat-yaml-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.7.35",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.35/4ec55d81a425f9d0f6eccd7638fbf55aaca6e767/slf4j-api-1.7.35-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.35/517f3a0687490b72d0e56d815e05608a541af802/slf4j-api-1.7.35.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.12.0",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/198b882fdc2c72c89c63401d946f6ba46c3acea3/commons-lang3-3.12.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.xml.bind",
+                    "name": "jakarta.xml.bind-api",
+                    "version": "2.3.3",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar"
+                        },
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/d83744bae211a4072c39f007000a13f501a88395/jakarta.xml.bind-api-2.3.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.jaxrs",
+                    "name": "jackson-jaxrs-json-provider",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-jaxrs-json-provider",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.13.4/3bc37404f5b9cfd919581fa5f728ccf459d68f98/jackson-jaxrs-json-provider-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-jaxrs-json-provider",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.13.4/6157ec477436eab0a557b09e685fe696197e6b5a/jackson-jaxrs-json-provider-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-core",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.4/dd8da2766363ea64383d1344349acce91d5a5469/jackson-core-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.4/cf934c681294b97ef6d80082faeefbe1edadf56/jackson-core-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-databind",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-databind",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.4/ff79802f58f6a86b5f7e7b40c4cfe018e2cffa77/jackson-databind-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-databind",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.4/98b0edfa8e4084078f10b7b356c300ded4a71491/jackson-databind-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.datatype",
+                    "name": "jackson-datatype-jsr310",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-datatype-jsr310",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.13.4/5624a1fd372ce2b69b9ce25fd4aab4c7aa041811/jackson-datatype-jsr310-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-datatype-jsr310",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.13.4/e6d820112871f33cd94a1dcc54eef58874753b5/jackson-datatype-jsr310-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.yaml",
+                    "name": "snakeyaml",
+                    "version": "1.31",
+                    "artifacts": [
+                        {
+                            "name": "snakeyaml",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.31/cf26b7b05fef01e7bec00cb88ab4feeeba743e12/snakeyaml-1.31.jar"
+                        },
+                        {
+                            "name": "snakeyaml",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.31/5e8249ed1694808d6a3fd9d9dc4270365666fe97/snakeyaml-1.31-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-annotations",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.4/f6b8a8daa9bcf7ece61c673e53f5d00b9e92e70e/jackson-annotations-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.4/858c6cc78e1f08a885b1613e1d817c829df70a6e/jackson-annotations-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.swagger.core.v3",
+                    "name": "swagger-integration",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "swagger-integration",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-integration/2.2.0/77711ff02d197956fb49111893c241cd5939a448/swagger-integration-2.2.0.jar"
+                        },
+                        {
+                            "name": "swagger-integration",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-integration/2.2.0/7b0422e15c073f828ae4e00e9ccca3dbb30eb9bd/swagger-integration-2.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.swagger.core.v3",
+                    "name": "swagger-annotations",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "swagger-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-annotations/2.2.0/404f8a4159d7d6034c3e515e3f673f19c6a100ee/swagger-annotations-2.2.0.jar"
+                        },
+                        {
+                            "name": "swagger-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-annotations/2.2.0/38551bebea2a325091b383f53a98152b5ae7862a/swagger-annotations-2.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.swagger.core.v3",
+                    "name": "swagger-jaxrs2",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "swagger-jaxrs2",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-jaxrs2/2.2.0/eccbeff933ff6fbb3a805b1099235e90e8965f5e/swagger-jaxrs2-2.2.0-sources.jar"
+                        },
+                        {
+                            "name": "swagger-jaxrs2",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-jaxrs2/2.2.0/150c087ce9a871bc3aac2ba30be4d7f0db3421b5/swagger-jaxrs2-2.2.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.validation",
+                    "name": "jakarta.validation-api",
+                    "version": "2.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.validation-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.2/ef429a7f3bc2d2d1784a1135668a857a6aaedf31/jakarta.validation-api-2.0.2-sources.jar"
+                        },
+                        {
+                            "name": "jakarta.validation-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.2/5eacc6522521f7eacb081f95cee1e231648461e7/jakarta.validation-api-2.0.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.jaxrs",
+                    "name": "jackson-jaxrs-base",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-jaxrs-base",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.13.4/5c6dd9e63e5827c5efdf0e26d2e4709f858a75a3/jackson-jaxrs-base-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-jaxrs-base",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.13.4/ee8967aec0f3a8cd257f241bf83a4b32f9b300d8/jackson-jaxrs-base-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.swagger.core.v3",
+                    "name": "swagger-models",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "swagger-models",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-models/2.2.0/4f09482dbc7337453a421dce830b8ef3d0110f45/swagger-models-2.2.0-sources.jar"
+                        },
+                        {
+                            "name": "swagger-models",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-models/2.2.0/4c2a02014692b378d92cebf4658c69ef6c78bb92/swagger-models-2.2.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.activation",
+                    "name": "jakarta.activation-api",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.activation-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/c45b5962230be8a5f93759203870c98917bb8b31/jakarta.activation-api-1.2.2-sources.jar"
+                        },
+                        {
+                            "name": "jakarta.activation-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.module",
+                    "name": "jackson-module-jaxb-annotations",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-module-jaxb-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.13.4/ecba5d724aa007faef38993c10fe249b19f1f0c4/jackson-module-jaxb-annotations-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-module-jaxb-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.13.4/da90f334c1e752342f2dedb59880d5d46b29fe03/jackson-module-jaxb-annotations-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.github.classgraph",
+                    "name": "classgraph",
+                    "version": "4.8.138",
+                    "artifacts": [
+                        {
+                            "name": "classgraph",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.github.classgraph/classgraph/4.8.138/af08df0ad62de2f4c686757a9a52ca2a8c2ea28c/classgraph-4.8.138.jar"
+                        },
+                        {
+                            "name": "classgraph",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.github.classgraph/classgraph/4.8.138/6141d28a161e8925c5bf11b00cce7043a95e6dd6/classgraph-4.8.138-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}

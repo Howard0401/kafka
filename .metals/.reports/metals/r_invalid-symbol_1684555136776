@@ -1,0 +1,3 @@
+Symbol: kafka/log/LogReadInfo#lastStableOffset.
+Error message: kafka/log/LogReadInfo#lastStableOffset.
+Error: scala.meta.internal.mtags.IndexingExceptions$InvalidSymbolException: kafka/log/LogReadInfo#lastStableOffset.

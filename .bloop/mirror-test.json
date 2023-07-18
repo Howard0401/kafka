@@ -1,0 +1,2385 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "mirror-test",
+        "directory": "/Users/howard/notes/kafka/connect/mirror",
+        "workspaceDir": "/Users/howard/notes/kafka",
+        "sources": [
+            "/Users/howard/notes/kafka/connect/mirror/src/test/java"
+        ],
+        "dependencies": [
+            "mirror",
+            "clients-test",
+            "runtime-test",
+            "core-test",
+            "runtime",
+            "json",
+            "transforms",
+            "connect-api",
+            "mirror-client",
+            "core",
+            "clients",
+            "storage",
+            "tools",
+            "group-coordinator",
+            "metadata",
+            "raft",
+            "server-common",
+            "log4j-appender"
+        ],
+        "classpath": [
+            "/Users/howard/notes/kafka/.bloop/mirror/build/classes",
+            "/Users/howard/notes/kafka/connect/mirror/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/clients-test/build/classes",
+            "/Users/howard/notes/kafka/clients/src/test/resources",
+            "/Users/howard/notes/kafka/.bloop/runtime-test/build/classes",
+            "/Users/howard/notes/kafka/connect/runtime/src/test/resources",
+            "/Users/howard/notes/kafka/.bloop/core-test/build/classes",
+            "/Users/howard/notes/kafka/core/src/test/resources",
+            "/Users/howard/notes/kafka/.bloop/runtime/build/classes",
+            "/Users/howard/notes/kafka/connect/runtime/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/json/build/classes",
+            "/Users/howard/notes/kafka/connect/json/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/transforms/build/classes",
+            "/Users/howard/notes/kafka/connect/transforms/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/connect-api/build/classes",
+            "/Users/howard/notes/kafka/connect/api/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/mirror-client/build/classes",
+            "/Users/howard/notes/kafka/connect/mirror-client/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/core/build/classes",
+            "/Users/howard/notes/kafka/core/src/main/resources",
+            "/Users/howard/notes/kafka/.bloop/clients/build/classes",
+            "/Users/howard/notes/kafka/clients/src/main/resources",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sourceforge.argparse4j/argparse4j/0.7.0/6f0621d0c3888de39e0f06d01f37ba53a798e657/argparse4j-0.7.0.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.13.4/557dbba5d8dfc7b7f944c58fe084109afcb5670b/jackson-datatype-jdk8-2.13.4.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.4.2/325c06bdfeb628cfb80ebaaf1a26cc1eb558a585/jackson-databind-2.13.4.2.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.4/cf934c681294b97ef6d80082faeefbe1edadf56/jackson-core-2.13.4.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.4/858c6cc78e1f08a885b1613e1d817c829df70a6e/jackson-annotations-2.13.4.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/6c62681a2f655b49963a5983b8b0950a6120ae14/slf4j-api-1.7.36.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.9.0/d6b6ccd3585351f617b06f066675271afebe9b28/junit-jupiter-params-5.9.0.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.9.0/a44f7eba3ea214f6ec87ad9fccd3b2ac4681a4/junit-jupiter-api-5.9.0.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.9.0/b727889107fc28c7460b21d1083212f8ce7602c6/junit-platform-commons-1.9.0.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.9.0/db1cd1cd9e3138cf9e5ecb12a2ccc9cfbdf6a1d/junit-jupiter-5.9.0.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.6.1/545665913b140db2793a0c37e6a686affd9c08b5/mockito-core-4.6.1.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.10/f34127d93639fad8c6fb84b3ca30292697d6c55d/byte-buddy-1.12.10.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.10/1f097f8d6cad60e8f93e5eb670cf5dc9b64da32/byte-buddy-agent-1.12.10.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.10/67c1afabaea9ba51321159e70a78515647e1b73d/scala-library-2.13.10.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar",
+            "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar"
+        ],
+        "out": "/Users/howard/notes/kafka/.bloop/mirror-test/build",
+        "classesDir": "/Users/howard/notes/kafka/.bloop/mirror-test/build/classes",
+        "resources": [
+            "/Users/howard/notes/kafka/connect/mirror/src/test/resources"
+        ],
+        "java": {
+            "options": [
+                "-encoding",
+                "UTF-8",
+                "-h",
+                "/Users/howard/notes/kafka/connect/mirror/build/generated/sources/headers/java/test",
+                "-g",
+                "-sourcepath",
+                "",
+                "-proc:none",
+                "-XDuseUnsharedTable=true",
+                "-Xlint:all",
+                "-Xlint:-serial",
+                "-Xlint:-try",
+                "-Werror",
+                "--release",
+                "8"
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework",
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "utest.runner.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    {
+                        "args": [
+                            "-v",
+                            "-a"
+                        ],
+                        "framework": {
+                            "names": [
+                                "com.novocode.junit.JUnitFramework"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/Library/Java/JavaVirtualMachines/microsoft-11.jdk/Contents/Home",
+                "options": [
+                    "-Xmx2560m",
+                    "-Xss4m",
+                    "-XX:+UseParallelGC"
+                ]
+            },
+            "mainClass": [
+                
+            ],
+            "classpath": [
+                "/Users/howard/notes/kafka/.bloop/mirror/build/classes",
+                "/Users/howard/notes/kafka/connect/mirror/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/clients-test/build/classes",
+                "/Users/howard/notes/kafka/clients/src/test/resources",
+                "/Users/howard/notes/kafka/.bloop/runtime-test/build/classes",
+                "/Users/howard/notes/kafka/connect/runtime/src/test/resources",
+                "/Users/howard/notes/kafka/.bloop/core-test/build/classes",
+                "/Users/howard/notes/kafka/core/src/test/resources",
+                "/Users/howard/notes/kafka/.bloop/runtime/build/classes",
+                "/Users/howard/notes/kafka/connect/runtime/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/json/build/classes",
+                "/Users/howard/notes/kafka/connect/json/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/transforms/build/classes",
+                "/Users/howard/notes/kafka/connect/transforms/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/core/build/classes",
+                "/Users/howard/notes/kafka/core/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/storage/build/classes",
+                "/Users/howard/notes/kafka/storage/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/connect-api/build/classes",
+                "/Users/howard/notes/kafka/connect/api/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/mirror-client/build/classes",
+                "/Users/howard/notes/kafka/connect/mirror-client/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/tools/build/classes",
+                "/Users/howard/notes/kafka/tools/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/group-coordinator/build/classes",
+                "/Users/howard/notes/kafka/group-coordinator/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/metadata/build/classes",
+                "/Users/howard/notes/kafka/metadata/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/raft/build/classes",
+                "/Users/howard/notes/kafka/raft/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/server-common/build/classes",
+                "/Users/howard/notes/kafka/server-common/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/log4j-appender/build/classes",
+                "/Users/howard/notes/kafka/log4j-appender/src/main/resources",
+                "/Users/howard/notes/kafka/.bloop/clients/build/classes",
+                "/Users/howard/notes/kafka/clients/src/main/resources",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sourceforge.argparse4j/argparse4j/0.7.0/6f0621d0c3888de39e0f06d01f37ba53a798e657/argparse4j-0.7.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.13.4/6157ec477436eab0a557b09e685fe696197e6b5a/jackson-jaxrs-json-provider-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.13.4/9d412a8b79a6c3a0728bf21c4772719aab646d7/jackson-dataformat-csv-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-scala_2.13/2.13.4/681fa6087e63b47ec8e79923309f2d648170ef1a/jackson-module-scala_2.13-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.13.4/557dbba5d8dfc7b7f944c58fe084109afcb5670b/jackson-datatype-jdk8-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.13.4/5c6dd9e63e5827c5efdf0e26d2e4709f858a75a3/jackson-jaxrs-base-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.13.4/da90f334c1e752342f2dedb59880d5d46b29fe03/jackson-module-jaxb-annotations-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.4.2/325c06bdfeb628cfb80ebaaf1a26cc1eb558a585/jackson-databind-2.13.4.2.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.4/cf934c681294b97ef6d80082faeefbe1edadf56/jackson-core-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.4/858c6cc78e1f08a885b1613e1d817c829df70a6e/jackson-annotations-2.13.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.9/b44a2235728ab1cad9ffd06013500f09a5f1d241/jose4j-0.7.9.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.yammer.metrics/metrics-core/2.2.0/f82c035cfa786d3cbec362c38c22a5f5b1bc8724/metrics-core-2.2.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.typesafe.scala-logging/scala-logging_2.13/3.9.4/e5838ddcf8c1c2b612a7956b9f80423a508675db/scala-logging_2.13-3.9.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.dropwizard.metrics/metrics-core/4.1.12.1/cb2f351bf4463751201f43bb99865235d5ba07ca/metrics-core-4.1.12.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.6.3/a6e74f826db85ff8c51c15ef0fa2ea0b462aef25/zookeeper-3.6.3.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-reload4j/1.7.36/db708f7d959dee1857ac524636e85ecf2e1781c1/slf4j-reload4j-1.7.36.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/6c62681a2f655b49963a5983b8b0950a6120ae14/slf4j-api-1.7.36.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.9.0/cc1cb5efae97493dcffb687253a0964ad2e7b99/junit-jupiter-engine-5.9.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.9.0/d6b6ccd3585351f617b06f066675271afebe9b28/junit-jupiter-params-5.9.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.9.0/a44f7eba3ea214f6ec87ad9fccd3b2ac4681a4/junit-jupiter-api-5.9.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.9.0/bd46891f01817b5ffdd368cb0482a34746610acb/junit-platform-engine-1.9.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.9.0/b727889107fc28c7460b21d1083212f8ce7602c6/junit-platform-commons-1.9.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.9.0/db1cd1cd9e3138cf9e5ecb12a2ccc9cfbdf6a1d/junit-jupiter-5.9.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.6.1/545665913b140db2793a0c37e6a686affd9c08b5/mockito-core-4.6.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.70/f81e5af49571a9d5a109a88f239a73ce87055417/bcpkix-jdk15on-1.70.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.10/f34127d93639fad8c6fb84b3ca30292697d6c55d/byte-buddy-1.12.10.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.10/1f097f8d6cad60e8f93e5eb670cf5dc9b64da32/byte-buddy-agent-1.12.10.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-collection-compat_2.13/2.6.0/6d987634f6bd6b9451f4789c6022c2115733a0de/scala-collection-compat_2.13-2.6.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-java8-compat_2.13/1.0.2/5b54f60ccf03e41e24c466462a72475ee918c304/scala-java8-compat_2.13-1.0.2.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.13.10/f19c2a5fc93a63398a5cfc56a14f0abf1d28d27c/scala-reflect-2.13.10.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.10/67c1afabaea9ba51321159e70a78515647e1b73d/scala-library-2.13.10.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.1.1/d3466bc9321fe84f268a1adb3b90373fc14b0eb5/javax.ws.rs-api-2.1.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/ch.qos.reload4j/reload4j/1.2.19/4eae9978468c5e885a6fb44df7e2bbc07a20e6ce/reload4j-1.2.19.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.34/6848a8321cfa554de4456a8230e141cf410feadb/jersey-container-servlet-2.34.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.inject/jersey-hk2/2.34/15bb093c57c0cac880ad7b474f7fd653cac840a1/jersey-hk2-2.34.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.0/99f802e0cb3e953ba3d6e698795c4aeb98d37c48/jaxb-api-2.3.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1.1/485de3a253e23f645037828c07f1d7f1af40763a/activation-1.1.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/9.4.48.v20220622/8a9a53e0aad3f194a4cc9940f7e9d5619254bf62/jetty-servlet-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/9.4.48.v20220622/6114f92529e9cff489528e6be77b48526a92d577/jetty-security-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.4.48.v20220622/b91a0641cda31c93962503b88f783602d2bd8093/jetty-server-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlets/9.4.48.v20220622/b113da58158c96d6dd8df440bb79c1c0b5e2056e/jetty-servlets-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-client/9.4.48.v20220622/fc2e953a7030045e1ca467d57e200856a170848e/jetty-client-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.reflections/reflections/0.9.12/1c9d44c563eebe9b8a3afebd29ed5c4646db800c/reflections-0.9.12.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.4/6dba6d03ac7abd8b895595b0ee7000ce35c3d421/maven-artifact-3.8.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-annotations/2.2.0/404f8a4159d7d6034c3e515e3f673f19c6a100ee/swagger-annotations-2.2.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.luben/zstd-jni/1.5.2-1/fad786abc1d1b81570e8d9a2fc8a1ef479bc27b6/zstd-jni-1.5.2-1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.lz4/lz4-java/1.8.0/4b986a99445e49ea5fbf5d149c4b63f6ed6c6780/lz4-java-1.8.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xerial.snappy/snappy-java/1.1.8.4/66f0d56454509f6e36175f2331572e250e04a6cc/snappy-java-1.1.8.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.2/7fadf57620c8b8abdf7519533e5527367cb51f09/objenesis-3.2.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.4/c51c00206bb913cd8612b24abd9fa98ae89719b1/commons-cli-1.4.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcutil-jdk15on/1.70/54280e7195a7430d7911ded93fc01e07300b9526/bcutil-jdk15on-1.70.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.70/4636a0d01f74acaf28082fb62b317f1080118371/bcprov-jdk15on-1.70.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.34/e71fb899349874cb2877656680508a257947601c/jersey-container-servlet-core-2.34.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.34/3f3ad63ce2b51ff565d3ba85eeb8202983e9be13/jersey-server-2.34.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.34/f9c6c7c6429a1ede8e73cf077bdca28ebff67681/jersey-client-2.34.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.34/cea85e85b1c19657ec3ea41b26351a53a40caa3c/jersey-common-2.34.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/1dcb770bce80a490dff49729b99c7a60e9ecb122/jakarta.ws.rs-api-2.1.6.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.6.1/9dedf9d2022e38ec0743ed44c1ac94ad6149acdd/hk2-locator-2.6.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.27.0-GA/f63e6aa899e15eca8fdaa402a79af4c417252213/javassist-3.27.0-GA.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/9.4.48.v20220622/8cb235e70bda0c5e97a41e7ee0ea33ee7f5bcc6a/jetty-http-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.4.48.v20220622/b09b55209d0a304e542f779750a01f6914dc55e7/jetty-io-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util-ajax/9.4.48.v20220622/def39454993d094df10b1689592d235e636d7dde/jetty-util-ajax-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/9.4.48.v20220622/2da1287dfc76d01418cc4b716d20154941b841ed/jetty-continuation-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.4.48.v20220622/7efc06f7ec0ff33d8c219bcc8c7415280c103669/jetty-util-9.4.48.v20220622.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.3.0/cf43b5391de623b36fe066a21127baef82c64022/plexus-utils-3.3.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.8.1/6505a72a097d9270f7a9e7bf42c4238283247755/commons-lang3-3.8.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/com.thoughtworks.paranamer/paranamer/2.8/619eba74c19ccf1da8ebec97a2d7f8ba05773dd6/paranamer-2.8.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper-jute/3.6.3/8990d19ec3db01f45f82d4011a11b085db66de05/zookeeper-jute-3.6.3.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.yetus/audience-annotations/0.5.0/55762d3191a8d6610ef46d11e8cb70c7667342a3/audience-annotations-0.5.0.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.78.Final/7e902b6018378bb700ec9364b1d0fba6eefd99fd/netty-handler-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.78.Final/dcb28ed02abf7bf02aa8dc9bf05f58bedcb12e9a/netty-transport-native-epoll-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.6.1/114bd7afb4a1bd9993527f52a08a252b5d2acac5/hk2-api-2.6.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.6.1/396513aa96c1d5a10aa4f75c4dcbf259a698d62d/hk2-utils-2.6.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/jakarta.inject/2.6.1/8096ebf722902e75fbd4f532a751e514f02e1eb7/jakarta.inject-2.6.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.3/de3b21279df7e755e38275137539be5e2c80dd58/osgi-resource-locator-1.0.3.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.2/5eacc6522521f7eacb081f95cee1e231648461e7/jakarta.validation-api-2.0.2.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.6.1/b2eb0a83bcbb44cc5d25f8b18f23be116313a638/aopalliance-repackaged-2.6.1.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.78.Final/2151893a521c6362858071053fddbd270c1f20bd/netty-transport-classes-epoll-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.78.Final/62c64e182a11e31ad80e68a94f0b02b45344df23/netty-transport-native-unix-common-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.78.Final/e8486c8923fc0914df4562a8e0923462e885f88a/netty-codec-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.78.Final/b1639d431e43622d6cbfdd45c30d3fb810fa9101/netty-transport-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.78.Final/691170d70a979757d50f60e16121ced5f411a9b8/netty-resolver-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.78.Final/6c0c2d805a2c8ea30223677d8219235f9ec14c38/netty-buffer-4.1.78.Final.jar",
+                "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.78.Final/d6f560098050f88ba11750aa856edd955e4a7707/netty-common-4.1.78.Final.jar"
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "info.picocli",
+                    "name": "picocli",
+                    "version": "4.5.1",
+                    "artifacts": [
+                        {
+                            "name": "picocli",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/info.picocli/picocli/4.5.1/9a88fcda7286d094b086118b60578875954896e3/picocli-4.5.1-sources.jar"
+                        },
+                        {
+                            "name": "picocli",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/info.picocli/picocli/4.5.1/ff913b736b6ffc7cdf8144401b02a501554ba0c5/picocli-4.5.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-util",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-util",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.4.48.v20220622/7efc06f7ec0ff33d8c219bcc8c7415280c103669/jetty-util-9.4.48.v20220622.jar"
+                        },
+                        {
+                            "name": "jetty-util",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.4.48.v20220622/8735704c5946a65ed5f6ce11a8fca9cc56de49af/jetty-util-9.4.48.v20220622-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.logging.log4j",
+                    "name": "log4j-api",
+                    "version": "2.19.0",
+                    "artifacts": [
+                        {
+                            "name": "log4j-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.19.0/e50c05b05437e7f5fc11609b8366a5e151f74461/log4j-api-2.19.0-sources.jar"
+                        },
+                        {
+                            "name": "log4j-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.19.0/ea1b37f38c327596b216542bc636cfdc0b8036fa/log4j-api-2.19.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-servlets",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-servlets",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlets/9.4.48.v20220622/373307566e251a20c8ac23e5b48721cf1a8a3e2c/jetty-servlets-9.4.48.v20220622-sources.jar"
+                        },
+                        {
+                            "name": "jetty-servlets",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlets/9.4.48.v20220622/b113da58158c96d6dd8df440bb79c1c0b5e2056e/jetty-servlets-9.4.48.v20220622.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.datatype",
+                    "name": "jackson-datatype-jdk8",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-datatype-jdk8",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.13.4/4cf0dea5221013dcffa6e4c659488fef60e38141/jackson-datatype-jdk8-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-datatype-jdk8",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.13.4/557dbba5d8dfc7b7f944c58fe084109afcb5670b/jackson-datatype-jdk8-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-annotations",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.4/f6b8a8daa9bcf7ece61c673e53f5d00b9e92e70e/jackson-annotations-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.13.4/858c6cc78e1f08a885b1613e1d817c829df70a6e/jackson-annotations-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.hk2",
+                    "name": "osgi-resource-locator",
+                    "version": "1.0.3",
+                    "artifacts": [
+                        {
+                            "name": "osgi-resource-locator",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.3/2f01d4501f52f63016fe70f7aea79c19cccb8d44/osgi-resource-locator-1.0.3-sources.jar"
+                        },
+                        {
+                            "name": "osgi-resource-locator",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.3/de3b21279df7e755e38275137539be5e2c80dd58/osgi-resource-locator-1.0.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.xmlresolver",
+                    "name": "xmlresolver",
+                    "version": "4.4.3",
+                    "artifacts": [
+                        {
+                            "name": "xmlresolver",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/d074fb4bc46d0439a63650b5ea700b07ea6e920/xmlresolver-4.4.3-sources.jar"
+                        },
+                        {
+                            "name": "xmlresolver",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/89079ec236d9683bb5f6f5cf4bef0cfc01b46e55/xmlresolver-4.4.3-data.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-beanutils",
+                    "name": "commons-beanutils",
+                    "version": "1.9.4",
+                    "artifacts": [
+                        {
+                            "name": "commons-beanutils",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.4/f00e0ba867d1810f255876631ab440e0725a9af0/commons-beanutils-1.9.4-sources.jar"
+                        },
+                        {
+                            "name": "commons-beanutils",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.9.4/d52b9abcd97f38c81342bb7e7ae1eee9b73cba51/commons-beanutils-1.9.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-codec",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-codec",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.78.Final/586f7f8de7aaed7f1c4d50e494d73fddffcaac5/netty-codec-4.1.78.Final-sources.jar"
+                        },
+                        {
+                            "name": "netty-codec",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.78.Final/e8486c8923fc0914df4562a8e0923462e885f88a/netty-codec-4.1.78.Final.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-util",
+                    "version": "9.4",
+                    "artifacts": [
+                        {
+                            "name": "asm-util",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/9.4/f4a5dfe8c02f87119418e3aaac0689fc3cc5b3db/asm-util-9.4-sources.jar"
+                        },
+                        {
+                            "name": "asm-util",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/9.4/ab1e0a84b72561dbaf1ee260321e72148ebf4b19/asm-util-9.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.xerial.snappy",
+                    "name": "snappy-java",
+                    "version": "1.1.8.4",
+                    "artifacts": [
+                        {
+                            "name": "snappy-java",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xerial.snappy/snappy-java/1.1.8.4/ae02b50fff26612bdf687952dc970ce9760b620c/snappy-java-1.1.8.4-sources.jar"
+                        },
+                        {
+                            "name": "snappy-java",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xerial.snappy/snappy-java/1.1.8.4/66f0d56454509f6e36175f2331572e250e04a6cc/snappy-java-1.1.8.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-http",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-http",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/9.4.48.v20220622/1de62f13303ac045191d9ad1abbb8b83817e68c8/jetty-http-9.4.48.v20220622-sources.jar"
+                        },
+                        {
+                            "name": "jetty-http",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/9.4.48.v20220622/8cb235e70bda0c5e97a41e7ee0ea33ee7f5bcc6a/jetty-http-9.4.48.v20220622.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.yetus",
+                    "name": "audience-annotations",
+                    "version": "0.5.0",
+                    "artifacts": [
+                        {
+                            "name": "audience-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.yetus/audience-annotations/0.5.0/51aa3138d72781ef879e9cb660daab3ac7c52c60/audience-annotations-0.5.0-sources.jar"
+                        },
+                        {
+                            "name": "audience-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.yetus/audience-annotations/0.5.0/55762d3191a8d6610ef46d11e8cb70c7667342a3/audience-annotations-0.5.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-simple",
+                    "version": "1.8.0-beta4",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-simple",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.8.0-beta4/8b990b86a27b555c243a869ec6c6b408e5a56260/slf4j-simple-1.8.0-beta4-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-simple",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.8.0-beta4/1531950ac50afd70a4d02f10b6aaf6d6a6a7669e/slf4j-simple-1.8.0-beta4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-continuation",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-continuation",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/9.4.48.v20220622/7ff9ad8b7871e0145b58c3307fb3c0111600e50e/jetty-continuation-9.4.48.v20220622-sources.jar"
+                        },
+                        {
+                            "name": "jetty-continuation",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/9.4.48.v20220622/2da1287dfc76d01418cc4b716d20154941b841ed/jetty-continuation-9.4.48.v20220622.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.bcel",
+                    "name": "bcel",
+                    "version": "6.5.0",
+                    "artifacts": [
+                        {
+                            "name": "bcel",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.bcel/bcel/6.5.0/79b1975ec0c7a6c1a15e19fb3a58cc4041b4aaea/bcel-6.5.0.jar"
+                        },
+                        {
+                            "name": "bcel",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.bcel/bcel/6.5.0/eb79971fe91f836a2c118cf37946867ce3810631/bcel-6.5.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.opentest4j",
+                    "name": "opentest4j",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "opentest4j",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/41d55b3c2254de9837b4ec8923cbd371b8a7eab5/opentest4j-1.2.0-sources.jar"
+                        },
+                        {
+                            "name": "opentest4j",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-transport",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-transport",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.78.Final/f3fa4b671e75a9248707063596d044d02a4cef85/netty-transport-4.1.78.Final-sources.jar"
+                        },
+                        {
+                            "name": "netty-transport",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.78.Final/b1639d431e43622d6cbfdd45c30d3fb810fa9101/netty-transport-4.1.78.Final.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "ch.qos.reload4j",
+                    "name": "reload4j",
+                    "version": "1.2.19",
+                    "artifacts": [
+                        {
+                            "name": "reload4j",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/ch.qos.reload4j/reload4j/1.2.19/4eae9978468c5e885a6fb44df7e2bbc07a20e6ce/reload4j-1.2.19.jar"
+                        },
+                        {
+                            "name": "reload4j",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/ch.qos.reload4j/reload4j/1.2.19/435055e6fec4dfaebf3f356c18246480e2157548/reload4j-1.2.19-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-reload4j",
+                    "version": "1.7.36",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-reload4j",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-reload4j/1.7.36/db708f7d959dee1857ac524636e85ecf2e1781c1/slf4j-reload4j-1.7.36.jar"
+                        },
+                        {
+                            "name": "slf4j-reload4j",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-reload4j/1.7.36/7adde2baa6395d097ab737516ad7c7fccf7044ba/slf4j-reload4j-1.7.36-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.xml.bind",
+                    "name": "jaxb-api",
+                    "version": "2.3.0",
+                    "artifacts": [
+                        {
+                            "name": "jaxb-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.0/431dc11c8e5d8b9f5149be5757ef8e170fc6824a/jaxb-api-2.3.0-sources.jar"
+                        },
+                        {
+                            "name": "jaxb-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.0/99f802e0cb3e953ba3d6e698795c4aeb98d37c48/jaxb-api-2.3.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-text",
+                    "version": "1.10.0",
+                    "artifacts": [
+                        {
+                            "name": "commons-text",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.10.0/3363381aef8cef2dbc1023b3e3a9433b08b64e01/commons-text-1.10.0.jar"
+                        },
+                        {
+                            "name": "commons-text",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.10.0/99ad76c831fcf0edead47f3aa9c0731653a0845d/commons-text-1.10.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.hk2",
+                    "name": "hk2-locator",
+                    "version": "2.6.1",
+                    "artifacts": [
+                        {
+                            "name": "hk2-locator",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.6.1/9dedf9d2022e38ec0743ed44c1ac94ad6149acdd/hk2-locator-2.6.1.jar"
+                        },
+                        {
+                            "name": "hk2-locator",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.6.1/73883e1a0effc4d1409743b515030a634f7b45c3/hk2-locator-2.6.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "2.0.0",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.0/1e496a9623d49c1140c73f8343ae1013e666411b/slf4j-api-2.0.0-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.0/82b150a36b504a09076b29c0509e31702c9c3999/slf4j-api-2.0.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bouncycastle",
+                    "name": "bcutil-jdk15on",
+                    "version": "1.70",
+                    "artifacts": [
+                        {
+                            "name": "bcutil-jdk15on",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcutil-jdk15on/1.70/54280e7195a7430d7911ded93fc01e07300b9526/bcutil-jdk15on-1.70.jar"
+                        },
+                        {
+                            "name": "bcutil-jdk15on",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcutil-jdk15on/1.70/4af4a6c92b8ea07885b27d8536b81b855497f4eb/bcutil-jdk15on-1.70-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.checkerframework",
+                    "name": "checker-qual",
+                    "version": "2.11.1",
+                    "artifacts": [
+                        {
+                            "name": "checker-qual",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/2.11.1/81dbb91c8dc3c53ae7066ce9e70ed7efb0551261/checker-qual-2.11.1-sources.jar"
+                        },
+                        {
+                            "name": "checker-qual",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/2.11.1/8c43bf8f99b841d23aadda6044329dad9b63c185/checker-qual-2.11.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.hk2",
+                    "name": "hk2-api",
+                    "version": "2.6.1",
+                    "artifacts": [
+                        {
+                            "name": "hk2-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.6.1/911d7e334b8b230b491bb130af8404fdb7a81059/hk2-api-2.6.1-sources.jar"
+                        },
+                        {
+                            "name": "hk2-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.6.1/114bd7afb4a1bd9993527f52a08a252b5d2acac5/hk2-api-2.6.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jersey.containers",
+                    "name": "jersey-container-servlet-core",
+                    "version": "2.34",
+                    "artifacts": [
+                        {
+                            "name": "jersey-container-servlet-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.34/e8272e8b020c45bf01ae33142e02817e1f9c95a5/jersey-container-servlet-core-2.34-sources.jar"
+                        },
+                        {
+                            "name": "jersey-container-servlet-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.34/e71fb899349874cb2877656680508a257947601c/jersey-container-servlet-core-2.34.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.errorprone",
+                    "name": "error_prone_annotations",
+                    "version": "2.3.4",
+                    "artifacts": [
+                        {
+                            "name": "error_prone_annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.3.4/dac170e4594de319655ffb62f41cbd6dbb5e601e/error_prone_annotations-2.3.4.jar"
+                        },
+                        {
+                            "name": "error_prone_annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.3.4/950adf6dcd7361e3d1e544a6e13b818587f95d14/error_prone_annotations-2.3.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.xml.bind",
+                    "name": "jakarta.xml.bind-api",
+                    "version": "2.3.3",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/48e3b9cfc10752fba3521d6511f4165bea951801/jakarta.xml.bind-api-2.3.3.jar"
+                        },
+                        {
+                            "name": "jakarta.xml.bind-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.3/d83744bae211a4072c39f007000a13f501a88395/jakarta.xml.bind-api-2.3.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy",
+                    "version": "1.12.10",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.10/f34127d93639fad8c6fb84b3ca30292697d6c55d/byte-buddy-1.12.10.jar"
+                        },
+                        {
+                            "name": "byte-buddy",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.10/159e5c256469770855453c70bfbbd4435fed3dc5/byte-buddy-1.12.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.module",
+                    "name": "jackson-module-scala_2.13",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-module-scala_2.13",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-scala_2.13/2.13.4/7f2b2dac5c65e07803b2984ce2b4116ac4114e92/jackson-module-scala_2.13-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-module-scala_2.13",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-scala_2.13/2.13.4/681fa6087e63b47ec8e79923309f2d648170ef1a/jackson-module-scala_2.13-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-tree",
+                    "version": "9.4",
+                    "artifacts": [
+                        {
+                            "name": "asm-tree",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/9.4/a99175a17d7fdc18cbcbd0e8ea6a5d276844190a/asm-tree-9.4.jar"
+                        },
+                        {
+                            "name": "asm-tree",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/9.4/88ef8527722d37849cca788dc90ebd44e7084226/asm-tree-9.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.hk2.external",
+                    "name": "jakarta.inject",
+                    "version": "2.6.1",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.inject",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/jakarta.inject/2.6.1/8096ebf722902e75fbd4f532a751e514f02e1eb7/jakarta.inject-2.6.1.jar"
+                        },
+                        {
+                            "name": "jakarta.inject",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/jakarta.inject/2.6.1/74132e0252fda12812a851695e488d3a862e09de/jakarta.inject-2.6.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.8.1",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.8.1/6505a72a097d9270f7a9e7bf42c4238283247755/commons-lang3-3.8.1.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.8.1/e9748d7783594da3735ad9724390a10e7cebc01d/commons-lang3-3.8.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jersey.containers",
+                    "name": "jersey-container-servlet",
+                    "version": "2.34",
+                    "artifacts": [
+                        {
+                            "name": "jersey-container-servlet",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.34/77a4ed49d13713e3098884eb15c1b7cfccadc9b4/jersey-container-servlet-2.34-sources.jar"
+                        },
+                        {
+                            "name": "jersey-container-servlet",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.34/6848a8321cfa554de4456a8230e141cf410feadb/jersey-container-servlet-2.34.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.code.findbugs",
+                    "name": "jsr305",
+                    "version": "3.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jsr305",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/b19b5927c2c25b6c70f093767041e641ae0b1b35/jsr305-3.0.2-sources.jar"
+                        },
+                        {
+                            "name": "jsr305",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.dom4j",
+                    "name": "dom4j",
+                    "version": "2.1.3",
+                    "artifacts": [
+                        {
+                            "name": "dom4j",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.dom4j/dom4j/2.1.3/fd3c592b44ddb513f9888441ca3510e9f1bcdeb3/dom4j-2.1.3-sources.jar"
+                        },
+                        {
+                            "name": "dom4j",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.dom4j/dom4j/2.1.3/a75914155a9f5808963170ec20653668a2ffd2fd/dom4j-2.1.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.maven",
+                    "name": "maven-artifact",
+                    "version": "3.8.4",
+                    "artifacts": [
+                        {
+                            "name": "maven-artifact",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.4/6dba6d03ac7abd8b895595b0ee7000ce35c3d421/maven-artifact-3.8.4.jar"
+                        },
+                        {
+                            "name": "maven-artifact",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.4/265d864d85ef5e2aa54fb19cc2c28b52271dc603/maven-artifact-3.8.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.yammer.metrics",
+                    "name": "metrics-core",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "metrics-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.yammer.metrics/metrics-core/2.2.0/f82c035cfa786d3cbec362c38c22a5f5b1bc8724/metrics-core-2.2.0.jar"
+                        },
+                        {
+                            "name": "metrics-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.yammer.metrics/metrics-core/2.2.0/6bdc9ec38b662632d7597d6f22942fb2dd2f5c4d/metrics-core-2.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-transport-native-unix-common",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-transport-native-unix-common",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.78.Final/62c64e182a11e31ad80e68a94f0b02b45344df23/netty-transport-native-unix-common-4.1.78.Final.jar"
+                        },
+                        {
+                            "name": "netty-transport-native-unix-common",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.78.Final/f3c3280502e146512797efd1c1968f4aebdec1de/netty-transport-native-unix-common-4.1.78.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-collection-compat_2.13",
+                    "version": "2.6.0",
+                    "artifacts": [
+                        {
+                            "name": "scala-collection-compat_2.13",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-collection-compat_2.13/2.6.0/6d987634f6bd6b9451f4789c6022c2115733a0de/scala-collection-compat_2.13-2.6.0.jar"
+                        },
+                        {
+                            "name": "scala-collection-compat_2.13",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-collection-compat_2.13/2.6.0/398c78a326419cb683eb4ac4b4530cdc47919b5/scala-collection-compat_2.13-2.6.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.platform",
+                    "name": "junit-platform-engine",
+                    "version": "1.9.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-platform-engine",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.9.0/bda902e43fe1f62674224452defd31f4c251e29d/junit-platform-engine-1.9.0-sources.jar"
+                        },
+                        {
+                            "name": "junit-platform-engine",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.9.0/bd46891f01817b5ffdd368cb0482a34746610acb/junit-platform-engine-1.9.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-handler",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-handler",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.78.Final/b3a6d7c7f3d3380eade1364995bba496bd12801a/netty-handler-4.1.78.Final-sources.jar"
+                        },
+                        {
+                            "name": "netty-handler",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.78.Final/7e902b6018378bb700ec9364b1d0fba6eefd99fd/netty-handler-4.1.78.Final.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jersey.core",
+                    "name": "jersey-common",
+                    "version": "2.34",
+                    "artifacts": [
+                        {
+                            "name": "jersey-common",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.34/cce50217e29e1c89345d82c275548714fc8b8d4/jersey-common-2.34-sources.jar"
+                        },
+                        {
+                            "name": "jersey-common",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.34/cea85e85b1c19657ec3ea41b26351a53a40caa3c/jersey-common-2.34.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.reflections",
+                    "name": "reflections",
+                    "version": "0.9.12",
+                    "artifacts": [
+                        {
+                            "name": "reflections",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.reflections/reflections/0.9.12/1c9d44c563eebe9b8a3afebd29ed5c4646db800c/reflections-0.9.12.jar"
+                        },
+                        {
+                            "name": "reflections",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.reflections/reflections/0.9.12/bce0f060e07c97ee9a04f6bdc4fd940adc4debcb/reflections-0.9.12-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-transport-native-epoll",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-transport-native-epoll",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.78.Final/dcb28ed02abf7bf02aa8dc9bf05f58bedcb12e9a/netty-transport-native-epoll-4.1.78.Final.jar"
+                        },
+                        {
+                            "name": "netty-transport-native-epoll",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.78.Final/b092d89bafdb9feadad02f33c965604909dcae12/netty-transport-native-epoll-4.1.78.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents.core5",
+                    "name": "httpcore5-h2",
+                    "version": "5.1.3",
+                    "artifacts": [
+                        {
+                            "name": "httpcore5-h2",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5-h2/5.1.3/4664b59b09f5ee008e37a963bbb92f4068e91696/httpcore5-h2-5.1.3.jar"
+                        },
+                        {
+                            "name": "httpcore5-h2",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5-h2/5.1.3/7c926d1c5a7d0d42453f2c1cf886787235e99e98/httpcore5-h2-5.1.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.annotation",
+                    "name": "jakarta.annotation-api",
+                    "version": "1.3.5",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.annotation-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar"
+                        },
+                        {
+                            "name": "jakarta.annotation-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/1ad35f11d17abb52426bfe15ea7b4c583795012/jakarta.annotation-api-1.3.5-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.hk2.external",
+                    "name": "aopalliance-repackaged",
+                    "version": "2.6.1",
+                    "artifacts": [
+                        {
+                            "name": "aopalliance-repackaged",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.6.1/8225e1c5c5615a447227ed9164e709be1e77802d/aopalliance-repackaged-2.6.1-sources.jar"
+                        },
+                        {
+                            "name": "aopalliance-repackaged",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.6.1/b2eb0a83bcbb44cc5d25f8b18f23be116313a638/aopalliance-repackaged-2.6.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bouncycastle",
+                    "name": "bcpkix-jdk15on",
+                    "version": "1.70",
+                    "artifacts": [
+                        {
+                            "name": "bcpkix-jdk15on",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.70/42f9de53a91b20bc06e88482c57fd97e5a84250d/bcpkix-jdk15on-1.70-sources.jar"
+                        },
+                        {
+                            "name": "bcpkix-jdk15on",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.70/f81e5af49571a9d5a109a88f239a73ce87055417/bcpkix-jdk15on-1.70.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-common",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-common",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.78.Final/624ca86c1600616f619b2702592bba8d3b4dca27/netty-common-4.1.78.Final-sources.jar"
+                        },
+                        {
+                            "name": "netty-common",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.78.Final/d6f560098050f88ba11750aa856edd955e4a7707/netty-common-4.1.78.Final.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-buffer",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-buffer",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.78.Final/229f4aba7a7382cd29951fb2477f058b3f09bace/netty-buffer-4.1.78.Final-sources.jar"
+                        },
+                        {
+                            "name": "netty-buffer",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.78.Final/6c0c2d805a2c8ea30223677d8219235f9ec14c38/netty-buffer-4.1.78.Final.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-commons",
+                    "version": "9.4",
+                    "artifacts": [
+                        {
+                            "name": "asm-commons",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.4/3b13ed8d997eb49e62d7e237dd37ce8e9e825208/asm-commons-9.4-sources.jar"
+                        },
+                        {
+                            "name": "asm-commons",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.4/8fc2810ddbcbbec0a8bbccb3f8eda58321839912/asm-commons-9.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.validation",
+                    "name": "jakarta.validation-api",
+                    "version": "2.0.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.validation-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.2/ef429a7f3bc2d2d1784a1135668a857a6aaedf31/jakarta.validation-api-2.0.2-sources.jar"
+                        },
+                        {
+                            "name": "jakarta.validation-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.2/5eacc6522521f7eacb081f95cee1e231648461e7/jakarta.validation-api-2.0.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-cli",
+                    "name": "commons-cli",
+                    "version": "1.4",
+                    "artifacts": [
+                        {
+                            "name": "commons-cli",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.4/40dfd9fdef125e19136135e68d54af6d9b0cfbb8/commons-cli-1.4-sources.jar"
+                        },
+                        {
+                            "name": "commons-cli",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.4/c51c00206bb913cd8612b24abd9fa98ae89719b1/commons-cli-1.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents.core5",
+                    "name": "httpcore5",
+                    "version": "5.1.3",
+                    "artifacts": [
+                        {
+                            "name": "httpcore5",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.1.3/75409375b1747c21e6484a6f1f103580ad097110/httpcore5-5.1.3-sources.jar"
+                        },
+                        {
+                            "name": "httpcore5",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.core5/httpcore5/5.1.3/d1638d1e5f2793f187d4144c702a93524ba6fd3b/httpcore5-5.1.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apiguardian",
+                    "name": "apiguardian-api",
+                    "version": "1.1.2",
+                    "artifacts": [
+                        {
+                            "name": "apiguardian-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/e0787a997746ac32639e0bf3cb27af8dce8a3428/apiguardian-api-1.1.2-sources.jar"
+                        },
+                        {
+                            "name": "apiguardian-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-collections",
+                    "name": "commons-collections",
+                    "version": "3.2.2",
+                    "artifacts": [
+                        {
+                            "name": "commons-collections",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar"
+                        },
+                        {
+                            "name": "commons-collections",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/78c50ebda5784937ca1615fc0e1d0cb35857d572/commons-collections-3.2.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-io",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-io",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.4.48.v20220622/b09b55209d0a304e542f779750a01f6914dc55e7/jetty-io-9.4.48.v20220622.jar"
+                        },
+                        {
+                            "name": "jetty-io",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.4.48.v20220622/6a870b7a0fee95293c337d0b5873257cc97b1321/jetty-io-9.4.48.v20220622-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-servlet",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-servlet",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/9.4.48.v20220622/8a9a53e0aad3f194a4cc9940f7e9d5619254bf62/jetty-servlet-9.4.48.v20220622.jar"
+                        },
+                        {
+                            "name": "jetty-servlet",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-servlet/9.4.48.v20220622/cce01febd6000b909cfd192011283629ba773936/jetty-servlet-9.4.48.v20220622-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.activation",
+                    "name": "jakarta.activation-api",
+                    "version": "1.2.2",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.activation-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/c45b5962230be8a5f93759203870c98917bb8b31/jakarta.activation-api-1.2.2-sources.jar"
+                        },
+                        {
+                            "name": "jakarta.activation-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.2/99f53adba383cb1bf7c3862844488574b559621f/jakarta.activation-api-1.2.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.activation",
+                    "name": "activation",
+                    "version": "1.1.1",
+                    "artifacts": [
+                        {
+                            "name": "activation",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1.1/485de3a253e23f645037828c07f1d7f1af40763a/activation-1.1.1.jar"
+                        },
+                        {
+                            "name": "activation",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1.1/159e45688875fdabff19c9ceb7335aefe4df8339/activation-1.1.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.thoughtworks.paranamer",
+                    "name": "paranamer",
+                    "version": "2.8",
+                    "artifacts": [
+                        {
+                            "name": "paranamer",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.thoughtworks.paranamer/paranamer/2.8/619eba74c19ccf1da8ebec97a2d7f8ba05773dd6/paranamer-2.8.jar"
+                        },
+                        {
+                            "name": "paranamer",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.thoughtworks.paranamer/paranamer/2.8/8f3421a8203053a6ab4b74f76a0550d21eee8cfe/paranamer-2.8-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "javax.servlet",
+                    "name": "javax.servlet-api",
+                    "version": "3.1.0",
+                    "artifacts": [
+                        {
+                            "name": "javax.servlet-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar"
+                        },
+                        {
+                            "name": "javax.servlet-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.typesafe.scala-logging",
+                    "name": "scala-logging_2.13",
+                    "version": "3.9.4",
+                    "artifacts": [
+                        {
+                            "name": "scala-logging_2.13",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.typesafe.scala-logging/scala-logging_2.13/3.9.4/e5838ddcf8c1c2b612a7956b9f80423a508675db/scala-logging_2.13-3.9.4.jar"
+                        },
+                        {
+                            "name": "scala-logging_2.13",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.typesafe.scala-logging/scala-logging_2.13/3.9.4/aa0aacdecec1eed2d9317f0ef4d822aba6b22400/scala-logging_2.13-3.9.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bitbucket.b_c",
+                    "name": "jose4j",
+                    "version": "0.7.9",
+                    "artifacts": [
+                        {
+                            "name": "jose4j",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.9/aa3c107cddcec9b95ca4120a35b144bcb7c0d949/jose4j-0.7.9-sources.jar"
+                        },
+                        {
+                            "name": "jose4j",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.7.9/b44a2235728ab1cad9ffd06013500f09a5f1d241/jose4j-0.7.9.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm-analysis",
+                    "version": "9.4",
+                    "artifacts": [
+                        {
+                            "name": "asm-analysis",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/9.4/47b38de3ca0cb7c6d14efc52f83bd69b763698ac/asm-analysis-9.4-sources.jar"
+                        },
+                        {
+                            "name": "asm-analysis",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/9.4/a5fec9dfc039448d4fd098fbaffcaf55373b223/asm-analysis-9.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sf.saxon",
+                    "name": "Saxon-HE",
+                    "version": "11.4",
+                    "artifacts": [
+                        {
+                            "name": "Saxon-HE",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.saxon/Saxon-HE/11.4/d926a13f2717ad1ea6e051550b8fd6207a587051/Saxon-HE-11.4.jar"
+                        },
+                        {
+                            "name": "Saxon-HE",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.saxon/Saxon-HE/11.4/eff3c87512aafe42947796faf8b799c1f78b893a/Saxon-HE-11.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.bouncycastle",
+                    "name": "bcprov-jdk15on",
+                    "version": "1.70",
+                    "artifacts": [
+                        {
+                            "name": "bcprov-jdk15on",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.70/4636a0d01f74acaf28082fb62b317f1080118371/bcprov-jdk15on-1.70.jar"
+                        },
+                        {
+                            "name": "bcprov-jdk15on",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.70/6245e15dd47e5fc33cff275df61662e0a8e5958f/bcprov-jdk15on-1.70-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-core",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.4/dd8da2766363ea64383d1344349acce91d5a5469/jackson-core-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.13.4/cf934c681294b97ef6d80082faeefbe1edadf56/jackson-core-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.bytebuddy",
+                    "name": "byte-buddy-agent",
+                    "version": "1.12.10",
+                    "artifacts": [
+                        {
+                            "name": "byte-buddy-agent",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.10/1f097f8d6cad60e8f93e5eb670cf5dc9b64da32/byte-buddy-agent-1.12.10.jar"
+                        },
+                        {
+                            "name": "byte-buddy-agent",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.10/98682e411e8fd6db44ca81afb19016404c16be8c/byte-buddy-agent-1.12.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.logging.log4j",
+                    "name": "log4j-core",
+                    "version": "2.19.0",
+                    "artifacts": [
+                        {
+                            "name": "log4j-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.19.0/3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb/log4j-core-2.19.0.jar"
+                        },
+                        {
+                            "name": "log4j-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.19.0/b01fda4bda99fce653352ebe79897e43dee2e67f/log4j-core-2.19.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.swagger.core.v3",
+                    "name": "swagger-annotations",
+                    "version": "2.2.0",
+                    "artifacts": [
+                        {
+                            "name": "swagger-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-annotations/2.2.0/404f8a4159d7d6034c3e515e3f673f19c6a100ee/swagger-annotations-2.2.0.jar"
+                        },
+                        {
+                            "name": "swagger-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.swagger.core.v3/swagger-annotations/2.2.0/38551bebea2a325091b383f53a98152b5ae7862a/swagger-annotations-2.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.mockito",
+                    "name": "mockito-core",
+                    "version": "4.6.1",
+                    "artifacts": [
+                        {
+                            "name": "mockito-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.6.1/545665913b140db2793a0c37e6a686affd9c08b5/mockito-core-4.6.1.jar"
+                        },
+                        {
+                            "name": "mockito-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.6.1/ee979fb3f29a780199db337a2f93b26347961023/mockito-core-4.6.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jakarta.ws.rs",
+                    "name": "jakarta.ws.rs-api",
+                    "version": "2.1.6",
+                    "artifacts": [
+                        {
+                            "name": "jakarta.ws.rs-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/6c66d1fc6dfd1de469e831d2cab362ce07b2561d/jakarta.ws.rs-api-2.1.6-sources.jar"
+                        },
+                        {
+                            "name": "jakarta.ws.rs-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jakarta.ws.rs/jakarta.ws.rs-api/2.1.6/1dcb770bce80a490dff49729b99c7a60e9ecb122/jakarta.ws.rs-api-2.1.6.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.j2objc",
+                    "name": "j2objc-annotations",
+                    "version": "1.3",
+                    "artifacts": [
+                        {
+                            "name": "j2objc-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/d26c56180205cbb50447c3eca98ecb617cf9f58b/j2objc-annotations-1.3-sources.jar"
+                        },
+                        {
+                            "name": "j2objc-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sf.jopt-simple",
+                    "name": "jopt-simple",
+                    "version": "5.0.4",
+                    "artifacts": [
+                        {
+                            "name": "jopt-simple",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/950831646d014c9162999019a3cb17d5fc01ac0d/jopt-simple-5.0.4-sources.jar"
+                        },
+                        {
+                            "name": "jopt-simple",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter",
+                    "version": "5.9.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.9.0/db1cd1cd9e3138cf9e5ecb12a2ccc9cfbdf6a1d/junit-jupiter-5.9.0.jar"
+                        },
+                        {
+                            "name": "junit-jupiter",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.9.0/5fd01c33132462aab3905cb74bd1097a713ab91a/junit-jupiter-5.9.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-server",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-server",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.4.48.v20220622/b91a0641cda31c93962503b88f783602d2bd8093/jetty-server-9.4.48.v20220622.jar"
+                        },
+                        {
+                            "name": "jetty-server",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.4.48.v20220622/486907a29bcc49daaa40ce988eb7fb24bc4ca9b8/jetty-server-9.4.48.v20220622-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "jaxen",
+                    "name": "jaxen",
+                    "version": "1.2.0",
+                    "artifacts": [
+                        {
+                            "name": "jaxen",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jaxen/jaxen/1.2.0/c10535a925bd35129a4329bc75065cc6b5293f2c/jaxen-1.2.0.jar"
+                        },
+                        {
+                            "name": "jaxen",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/jaxen/jaxen/1.2.0/6c420545d72198d569e6cad3e4cd86ebb68d353/jaxen-1.2.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-transport-classes-epoll",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-transport-classes-epoll",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.78.Final/39c1de8b25e26ce14dafb6b8ef74b935a511b33f/netty-transport-classes-epoll-4.1.78.Final-sources.jar"
+                        },
+                        {
+                            "name": "netty-transport-classes-epoll",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.78.Final/2151893a521c6362858071053fddbd270c1f20bd/netty-transport-classes-epoll-4.1.78.Final.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-engine",
+                    "version": "5.9.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-engine",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.9.0/1342cdbc880788707e133ec3a8dc9cbf84b041df/junit-jupiter-engine-5.9.0-sources.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-engine",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.9.0/cc1cb5efae97493dcffb687253a0964ad2e7b99/junit-jupiter-engine-5.9.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-security",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-security",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/9.4.48.v20220622/6114f92529e9cff489528e6be77b48526a92d577/jetty-security-9.4.48.v20220622.jar"
+                        },
+                        {
+                            "name": "jetty-security",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-security/9.4.48.v20220622/180f6a2febc5d34139c079bc8ca4ab17a61c9261/jetty-security-9.4.48.v20220622-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.8.0-beta4",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.8.0-beta4/b36a694fefcf7c2a274765143dc63e86389b33d1/slf4j-api-1.8.0-beta4-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.8.0-beta4/83b0359d847ee053d745be7ec0d8e9e8a44304b4/slf4j-api-1.8.0-beta4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.httpcomponents.client5",
+                    "name": "httpclient5",
+                    "version": "5.1.3",
+                    "artifacts": [
+                        {
+                            "name": "httpclient5",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.client5/httpclient5/5.1.3/8fec06124157f4adf8fe9ffdc75620e3b5d318d2/httpclient5-5.1.3-sources.jar"
+                        },
+                        {
+                            "name": "httpclient5",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents.client5/httpclient5/5.1.3/13c984b7b881afcff3a7f0bb95878724a48a4b66/httpclient5-5.1.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "failureaccess",
+                    "version": "1.0.1",
+                    "artifacts": [
+                        {
+                            "name": "failureaccess",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1d064e61aad6c51cc77f9b59dc2cccc78e792f5a/failureaccess-1.0.1-sources.jar"
+                        },
+                        {
+                            "name": "failureaccess",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "listenablefuture",
+                    "version": "9999.0-empty-to-avoid-conflict-with-guava",
+                    "artifacts": [
+                        {
+                            "name": "listenablefuture",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.netty",
+                    "name": "netty-resolver",
+                    "version": "4.1.78.Final",
+                    "artifacts": [
+                        {
+                            "name": "netty-resolver",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.78.Final/691170d70a979757d50f60e16121ced5f411a9b8/netty-resolver-4.1.78.Final.jar"
+                        },
+                        {
+                            "name": "netty-resolver",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.78.Final/cf94e7820676f92e3428459088c228fbbfbddf42/netty-resolver-4.1.78.Final-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.ow2.asm",
+                    "name": "asm",
+                    "version": "9.4",
+                    "artifacts": [
+                        {
+                            "name": "asm",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.4/6dddbde6cbd323bebe46cf301a47ffbe9e804d4/asm-9.4-sources.jar"
+                        },
+                        {
+                            "name": "asm",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.4/b4e0e2d2e023aa317b7cfcfc916377ea348e07d1/asm-9.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.commons",
+                    "name": "commons-lang3",
+                    "version": "3.12.0",
+                    "artifacts": [
+                        {
+                            "name": "commons-lang3",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar"
+                        },
+                        {
+                            "name": "commons-lang3",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/198b882fdc2c72c89c63401d946f6ba46c3acea3/commons-lang3-3.12.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.codehaus.plexus",
+                    "name": "plexus-utils",
+                    "version": "3.3.0",
+                    "artifacts": [
+                        {
+                            "name": "plexus-utils",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.3.0/ebfaf7070f7a3f5314ff28180d81088aa8cd2f41/plexus-utils-3.3.0-sources.jar"
+                        },
+                        {
+                            "name": "plexus-utils",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.3.0/cf43b5391de623b36fe066a21127baef82c64022/plexus-utils-3.3.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.13.10",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.10/67c1afabaea9ba51321159e70a78515647e1b73d/scala-library-2.13.10.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.13.10/68e791105b904f26ee2eaa8c17e740c8076e36eb/scala-library-2.13.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.xmlresolver",
+                    "name": "xmlresolver",
+                    "version": "4.4.3",
+                    "artifacts": [
+                        {
+                            "name": "xmlresolver",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/d074fb4bc46d0439a63650b5ea700b07ea6e920/xmlresolver-4.4.3-sources.jar"
+                        },
+                        {
+                            "name": "xmlresolver",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.xmlresolver/xmlresolver/4.4.3/aa8421211b0f69b5572d2d4b4252b2d87f957754/xmlresolver-4.4.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sf.saxon",
+                    "name": "Saxon-HE",
+                    "version": "10.2",
+                    "artifacts": [
+                        {
+                            "name": "Saxon-HE",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.saxon/Saxon-HE/10.2/d279b8aacf0cdb18e94256edc4c0a31388792c8e/Saxon-HE-10.2-sources.jar"
+                        },
+                        {
+                            "name": "Saxon-HE",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sf.saxon/Saxon-HE/10.2/22444a1091ee5f28d1d8e793d2c3441e3a6fa22b/Saxon-HE-10.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.lz4",
+                    "name": "lz4-java",
+                    "version": "1.8.0",
+                    "artifacts": [
+                        {
+                            "name": "lz4-java",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.lz4/lz4-java/1.8.0/4b986a99445e49ea5fbf5d149c4b63f6ed6c6780/lz4-java-1.8.0.jar"
+                        },
+                        {
+                            "name": "lz4-java",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.lz4/lz4-java/1.8.0/7609c362f37f0c0bd3743bc1976df2daa28ad19e/lz4-java-1.8.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-util-ajax",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-util-ajax",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util-ajax/9.4.48.v20220622/a65e73418c1ff2e38ba674f6b141d1cef56639b3/jetty-util-ajax-9.4.48.v20220622-sources.jar"
+                        },
+                        {
+                            "name": "jetty-util-ajax",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util-ajax/9.4.48.v20220622/def39454993d094df10b1689592d235e636d7dde/jetty-util-ajax-9.4.48.v20220622.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.module",
+                    "name": "jackson-module-jaxb-annotations",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-module-jaxb-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.13.4/ecba5d724aa007faef38993c10fe249b19f1f0c4/jackson-module-jaxb-annotations-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-module-jaxb-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.13.4/da90f334c1e752342f2dedb59880d5d46b29fe03/jackson-module-jaxb-annotations-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.core",
+                    "name": "jackson-databind",
+                    "version": "2.13.4.2",
+                    "artifacts": [
+                        {
+                            "name": "jackson-databind",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.4.2/99771ed18f5059ca6b4fb51142d7aa4a2eba9002/jackson-databind-2.13.4.2-sources.jar"
+                        },
+                        {
+                            "name": "jackson-databind",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.13.4.2/325c06bdfeb628cfb80ebaaf1a26cc1eb558a585/jackson-databind-2.13.4.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.objenesis",
+                    "name": "objenesis",
+                    "version": "3.2",
+                    "artifacts": [
+                        {
+                            "name": "objenesis",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.2/7fadf57620c8b8abdf7519533e5527367cb51f09/objenesis-3.2.jar"
+                        },
+                        {
+                            "name": "objenesis",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.2/9f5da90020a255f25b6d8da8db273e2d38ce9805/objenesis-3.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.dataformat",
+                    "name": "jackson-dataformat-csv",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-dataformat-csv",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.13.4/e12690b88fb8738bf9d3106af77fd52b5c77ab38/jackson-dataformat-csv-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-dataformat-csv",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-csv/2.13.4/9d412a8b79a6c3a0728bf21c4772719aab646d7/jackson-dataformat-csv-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jersey.inject",
+                    "name": "jersey-hk2",
+                    "version": "2.34",
+                    "artifacts": [
+                        {
+                            "name": "jersey-hk2",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.inject/jersey-hk2/2.34/c53ad4d5455bdd3103ad2b3d1b25c627a217cd34/jersey-hk2-2.34-sources.jar"
+                        },
+                        {
+                            "name": "jersey-hk2",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.inject/jersey-hk2/2.34/15bb093c57c0cac880ad7b474f7fd653cac840a1/jersey-hk2-2.34.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang.modules",
+                    "name": "scala-java8-compat_2.13",
+                    "version": "1.0.2",
+                    "artifacts": [
+                        {
+                            "name": "scala-java8-compat_2.13",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-java8-compat_2.13/1.0.2/5b54f60ccf03e41e24c466462a72475ee918c304/scala-java8-compat_2.13-1.0.2.jar"
+                        },
+                        {
+                            "name": "scala-java8-compat_2.13",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-java8-compat_2.13/1.0.2/2dd8112b57459da614a876a8f6b64bd05beb4c4e/scala-java8-compat_2.13-1.0.2-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jersey.core",
+                    "name": "jersey-client",
+                    "version": "2.34",
+                    "artifacts": [
+                        {
+                            "name": "jersey-client",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.34/95e68fedf856ce244ed510be12580a876c54cf9b/jersey-client-2.34-sources.jar"
+                        },
+                        {
+                            "name": "jersey-client",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.34/f9c6c7c6429a1ede8e73cf077bdca28ebff67681/jersey-client-2.34.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "io.dropwizard.metrics",
+                    "name": "metrics-core",
+                    "version": "4.1.12.1",
+                    "artifacts": [
+                        {
+                            "name": "metrics-core",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.dropwizard.metrics/metrics-core/4.1.12.1/cb2f351bf4463751201f43bb99865235d5ba07ca/metrics-core-4.1.12.1.jar"
+                        },
+                        {
+                            "name": "metrics-core",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/io.dropwizard.metrics/metrics-core/4.1.12.1/de5495a55f05326347fd49e2830210a0c3f692ad/metrics-core-4.1.12.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.zookeeper",
+                    "name": "zookeeper-jute",
+                    "version": "3.6.3",
+                    "artifacts": [
+                        {
+                            "name": "zookeeper-jute",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper-jute/3.6.3/e0000c31d865ab735e811484e8e39fff8288381a/zookeeper-jute-3.6.3-sources.jar"
+                        },
+                        {
+                            "name": "zookeeper-jute",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper-jute/3.6.3/8990d19ec3db01f45f82d4011a11b085db66de05/zookeeper-jute-3.6.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.slf4j",
+                    "name": "slf4j-api",
+                    "version": "1.7.36",
+                    "artifacts": [
+                        {
+                            "name": "slf4j-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/ae9c1aae0033af915cfa75d850eb9d880f21a701/slf4j-api-1.7.36-sources.jar"
+                        },
+                        {
+                            "name": "slf4j-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/6c62681a2f655b49963a5983b8b0950a6120ae14/slf4j-api-1.7.36.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.jcip",
+                    "name": "jcip-annotations",
+                    "version": "1.0",
+                    "artifacts": [
+                        {
+                            "name": "jcip-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.jcip/jcip-annotations/1.0/afba4942caaeaf46aab0b976afd57cc7c181467e/jcip-annotations-1.0.jar"
+                        },
+                        {
+                            "name": "jcip-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.jcip/jcip-annotations/1.0/d853625d8001c00d40abed553e670279504699f9/jcip-annotations-1.0-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.eclipse.jetty",
+                    "name": "jetty-client",
+                    "version": "9.4.48.v20220622",
+                    "artifacts": [
+                        {
+                            "name": "jetty-client",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-client/9.4.48.v20220622/fc2e953a7030045e1ca467d57e200856a170848e/jetty-client-9.4.48.v20220622.jar"
+                        },
+                        {
+                            "name": "jetty-client",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-client/9.4.48.v20220622/c1eb8ff42d9eb964ec488739a598ab4e31e48589/jetty-client-9.4.48.v20220622-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.guava",
+                    "name": "guava",
+                    "version": "29.0-jre",
+                    "artifacts": [
+                        {
+                            "name": "guava",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/29.0-jre/801142b4c3d0f0770dd29abea50906cacfddd447/guava-29.0-jre.jar"
+                        },
+                        {
+                            "name": "guava",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/29.0-jre/33e6868bc0fcb9b4b493123eeec78d1352934e87/guava-29.0-jre-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.javassist",
+                    "name": "javassist",
+                    "version": "3.27.0-GA",
+                    "artifacts": [
+                        {
+                            "name": "javassist",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.27.0-GA/f63e6aa899e15eca8fdaa402a79af4c417252213/javassist-3.27.0-GA.jar"
+                        },
+                        {
+                            "name": "javassist",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.27.0-GA/e5dea2989ab81731501c670be0d1514512dbc13a/javassist-3.27.0-GA-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spotbugs",
+                    "name": "spotbugs",
+                    "version": "4.7.3",
+                    "artifacts": [
+                        {
+                            "name": "spotbugs",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs/4.7.3/71b7e768bff5b99695874f9e5c34197f871d60fb/spotbugs-4.7.3.jar"
+                        },
+                        {
+                            "name": "spotbugs",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs/4.7.3/7a1e1df14dbf062ef8fcf684a5e8f7dc192b60dd/spotbugs-4.7.3-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.jersey.core",
+                    "name": "jersey-server",
+                    "version": "2.34",
+                    "artifacts": [
+                        {
+                            "name": "jersey-server",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.34/a983bcb3c035e93d37e36ddb75b4b854ffa85f47/jersey-server-2.34-sources.jar"
+                        },
+                        {
+                            "name": "jersey-server",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.34/3f3ad63ce2b51ff565d3ba85eeb8202983e9be13/jersey-server-2.34.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.glassfish.hk2",
+                    "name": "hk2-utils",
+                    "version": "2.6.1",
+                    "artifacts": [
+                        {
+                            "name": "hk2-utils",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.6.1/91a2264ed6d909c44763fc807d22a19da87b84c9/hk2-utils-2.6.1-sources.jar"
+                        },
+                        {
+                            "name": "hk2-utils",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.6.1/396513aa96c1d5a10aa4f75c4dcbf259a698d62d/hk2-utils-2.6.1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.jaxrs",
+                    "name": "jackson-jaxrs-json-provider",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-jaxrs-json-provider",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.13.4/3bc37404f5b9cfd919581fa5f728ccf459d68f98/jackson-jaxrs-json-provider-2.13.4-sources.jar"
+                        },
+                        {
+                            "name": "jackson-jaxrs-json-provider",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.13.4/6157ec477436eab0a557b09e685fe696197e6b5a/jackson-jaxrs-json-provider-2.13.4.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "xml-apis",
+                    "name": "xml-apis",
+                    "version": "1.4.01",
+                    "artifacts": [
+                        {
+                            "name": "xml-apis",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/5502da0c4c0a7916a604356ef19394ccfa30cd4b/xml-apis-1.4.01-sources.jar"
+                        },
+                        {
+                            "name": "xml-apis",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.google.code.gson",
+                    "name": "gson",
+                    "version": "2.9.1",
+                    "artifacts": [
+                        {
+                            "name": "gson",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.9.1/2cc2131b98ebfb04e2b2c7dfb84431f4045096b/gson-2.9.1.jar"
+                        },
+                        {
+                            "name": "gson",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.9.1/2f8e47a3905fcb3c0511d7c294c987d77803021e/gson-2.9.1-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.fasterxml.jackson.jaxrs",
+                    "name": "jackson-jaxrs-base",
+                    "version": "2.13.4",
+                    "artifacts": [
+                        {
+                            "name": "jackson-jaxrs-base",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.13.4/5c6dd9e63e5827c5efdf0e26d2e4709f858a75a3/jackson-jaxrs-base-2.13.4.jar"
+                        },
+                        {
+                            "name": "jackson-jaxrs-base",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.13.4/ee8967aec0f3a8cd257f241bf83a4b32f9b300d8/jackson-jaxrs-base-2.13.4-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-params",
+                    "version": "5.9.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-params",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.9.0/90177afa01c4b718dd91c27bdc91cb1062e640af/junit-jupiter-params-5.9.0-sources.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-params",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.9.0/d6b6ccd3585351f617b06f066675271afebe9b28/junit-jupiter-params-5.9.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "antlr",
+                    "name": "antlr",
+                    "version": "2.7.7",
+                    "artifacts": [
+                        {
+                            "name": "antlr",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "net.sourceforge.argparse4j",
+                    "name": "argparse4j",
+                    "version": "0.7.0",
+                    "artifacts": [
+                        {
+                            "name": "argparse4j",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sourceforge.argparse4j/argparse4j/0.7.0/dc5e5b48261b5eb12c2804561a98f1fbc287bc07/argparse4j-0.7.0-sources.jar"
+                        },
+                        {
+                            "name": "argparse4j",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/net.sourceforge.argparse4j/argparse4j/0.7.0/6f0621d0c3888de39e0f06d01f37ba53a798e657/argparse4j-0.7.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.spotbugs",
+                    "name": "spotbugs-annotations",
+                    "version": "4.7.3",
+                    "artifacts": [
+                        {
+                            "name": "spotbugs-annotations",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.7.3/f0b58a97c071884943ad5c48747a915f474f8fe6/spotbugs-annotations-4.7.3-sources.jar"
+                        },
+                        {
+                            "name": "spotbugs-annotations",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.7.3/46fb4f0ae2e69eafa963711cc5c3369ac81aa31f/spotbugs-annotations-4.7.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.antlr",
+                    "name": "antlr4-runtime",
+                    "version": "4.8-1",
+                    "artifacts": [
+                        {
+                            "name": "antlr4-runtime",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.8-1/57eb50176be55f02c469010597bd7b6c1f954aab/antlr4-runtime-4.8-1-sources.jar"
+                        },
+                        {
+                            "name": "antlr4-runtime",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.8-1/2d0456a791f3a95916c8c23b3bea3a90eea24720/antlr4-runtime-4.8-1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-reflect",
+                    "version": "2.13.10",
+                    "artifacts": [
+                        {
+                            "name": "scala-reflect",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.13.10/f19c2a5fc93a63398a5cfc56a14f0abf1d28d27c/scala-reflect-2.13.10.jar"
+                        },
+                        {
+                            "name": "scala-reflect",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.13.10/5df79e6c2f21a25172ed2ecc3c83f4703ad50061/scala-reflect-2.13.10-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.puppycrawl.tools",
+                    "name": "checkstyle",
+                    "version": "8.36.2",
+                    "artifacts": [
+                        {
+                            "name": "checkstyle",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.puppycrawl.tools/checkstyle/8.36.2/3af0d6914b76bfefad7ab3f3feaaccca7e753cbe/checkstyle-8.36.2-sources.jar"
+                        },
+                        {
+                            "name": "checkstyle",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.puppycrawl.tools/checkstyle/8.36.2/85fc66abe552ceb2f2fff6e5588d38779d31654b/checkstyle-8.36.2.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "com.github.luben",
+                    "name": "zstd-jni",
+                    "version": "1.5.2-1",
+                    "artifacts": [
+                        {
+                            "name": "zstd-jni",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.luben/zstd-jni/1.5.2-1/fc4dca644fbb8527bc77622209b933a19572a983/zstd-jni-1.5.2-1-sources.jar"
+                        },
+                        {
+                            "name": "zstd-jni",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/com.github.luben/zstd-jni/1.5.2-1/fad786abc1d1b81570e8d9a2fc8a1ef479bc27b6/zstd-jni-1.5.2-1.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.jupiter",
+                    "name": "junit-jupiter-api",
+                    "version": "5.9.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-jupiter-api",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.9.0/e23e68771c361cdc17004c5ec30095d609df980/junit-jupiter-api-5.9.0-sources.jar"
+                        },
+                        {
+                            "name": "junit-jupiter-api",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.9.0/a44f7eba3ea214f6ec87ad9fccd3b2ac4681a4/junit-jupiter-api-5.9.0.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "commons-codec",
+                    "name": "commons-codec",
+                    "version": "1.15",
+                    "artifacts": [
+                        {
+                            "name": "commons-codec",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar"
+                        },
+                        {
+                            "name": "commons-codec",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/843bc57fd042051e994846da8167bb7ca677a6d/commons-codec-1.15-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.apache.zookeeper",
+                    "name": "zookeeper",
+                    "version": "3.6.3",
+                    "artifacts": [
+                        {
+                            "name": "zookeeper",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.6.3/5a89f52cdd10e5d416ba6816ad787ea9d505a92f/zookeeper-3.6.3-sources.jar"
+                        },
+                        {
+                            "name": "zookeeper",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.6.3/a6e74f826db85ff8c51c15ef0fa2ea0b462aef25/zookeeper-3.6.3.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.junit.platform",
+                    "name": "junit-platform-commons",
+                    "version": "1.9.0",
+                    "artifacts": [
+                        {
+                            "name": "junit-platform-commons",
+                            "classifier": "sources",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.9.0/18dd59a6622942632cfc7a38c2feae4a3066fc7c/junit-platform-commons-1.9.0-sources.jar"
+                        },
+                        {
+                            "name": "junit-platform-commons",
+                            "path": "/Users/howard/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.9.0/b727889107fc28c7460b21d1083212f8ce7602c6/junit-platform-commons-1.9.0.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}
