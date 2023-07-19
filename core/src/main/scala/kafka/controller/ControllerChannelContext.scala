@@ -51,7 +51,13 @@ trait ControllerChannelContext {
   // newFinalizedVersionOrIncompatibilityError
   def liveOrShuttingDownBrokers: collection.Set[Broker]
 
+<<<<<<< HEAD
   // 各種操作
+=======
+  // ControllerChannelManager.scala
+  // 1. addUpdateMetadataRequestForBrokers 時，先做檢查用途
+  // 2. 
+>>>>>>> d3002573a3 (update comments)
   def isTopicQueuedUpForDeletion(topic: String): Boolean
 
 
