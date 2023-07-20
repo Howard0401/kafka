@@ -51,21 +51,42 @@ trait ControllerChannelContext {
   // newFinalizedVersionOrIncompatibilityError
   def liveOrShuttingDownBrokers: collection.Set[Broker]
 
-<<<<<<< HEAD
-  // 各種操作
-=======
-  // ControllerChannelManager.scala
+  // ControllerChannelManager.scala, 
   // 1. addUpdateMetadataRequestForBrokers 時，先做檢查用途
-  // 2. 
->>>>>>> d3002573a3 (update comments)
+  // ControllerContext 在 leaderEpoch 或 partition 或 metric 各種操作時會先檢查有無在 delete queue 內
+  // ...
+
+  // KafkaController.scala
+  // onBrokerStartup
+  // onReplicasBecomeOffline
+  // maybeTriggerPartitionReassignment
+  // fetchPendingPreferredReplicaElections
+  // checkAndTriggerAutoLeaderRebalance/
+  // doControlledShutdown
+  // processPartitionModifications
+  // processReplicaLeaderElection
+
+  // PartitionStateMachine.scala
+  // triggerOnlineStateChangeForPartitions
+  
+  // ReplicaStateMachine.scala
+  // doHandleStateChanges (OfflineReplica)
+  // doRemoveReplicasFromIsr
+
+  // TopicDeletionManager.scala
+  // failReplicaDeletion
+  // completeReplicaDeletion
+  // isTopicEligibleForDeletion
   def isTopicQueuedUpForDeletion(topic: String): Boolean
+
+
 
 
   // ControllerChannelContext.scala
   // addUpdateMetadataRequestForBrokers
   // 1. Eelection.scala -> leaderForOffline 判斷能否參選
   // KafkaController.scala 
-  // delete
+  // 
   def isReplicaOnline(brokerId: Int, partition: TopicPartition): Boolean
 
   def partitionReplicaAssignment(partition: TopicPartition): collection.Seq[Int]
